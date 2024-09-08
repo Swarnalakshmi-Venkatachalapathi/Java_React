@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+                           
+                           
+     <bean id = "prod1" class = "com.hexa.spring2.com.hexaspring33.Product">
+     <property name = "id" value = "001"/>
+     <property name = "Pname" value = "Mobile"/>
+     <property name = "price" value = "15000"/>
+     
+     </bean>     
+     
+     <bean id = "cart1" class ="com.hexa.spring2.com.hexaspring33.Cart"  >
+     <property name="qty" value = "3"/>
+    
+     <property name = "pro" ref = "prod1"/>
+     </bean>               
+                           
+</beans>
