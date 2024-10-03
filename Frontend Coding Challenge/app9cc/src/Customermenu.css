@@ -1,0 +1,110 @@
+
+/* Style for the menu page header */
+.menu-page {
+    background-color: #f8f9fa;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.website-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style for the customer menu section */
+.customer-menu {
+    padding: 20px;
+}
+
+
+
+/* Card styling */
+.ui.card {
+    margin: 10px; /* Space around the card */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transform and shadow transition */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    background-color: #ffffff; /* White background */
+    overflow: hidden; /* Ensures contents don't overflow */
+}
+
+/* Hover effect */
+.ui.card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+/* Card header styling */
+.ui.card .header {
+    font-size: 18px; /* Increase font size for the header */
+    font-weight: bold; /* Bold text for the header */
+    color: #333; /* Dark text color */
+    padding: 15px; /* Padding for the header */
+    background-color: #f0f0f0; /* Light gray background for the header */
+}
+
+/* Card content styling */
+.ui.card .content {
+    padding: 15px; /* Padding inside the card content */
+    color: #555; /* Medium gray text color for content */
+}
+
+/* Card description styling */
+.ui.card .description {
+    font-size: 14px; /* Smaller font size for description */
+    color: #666; /* Light gray text color for description */
+}
+
+
+
+
+.ui.modal .header {
+    background-color: #5d999c;
+    color: white;
+}
+
+.ui.modal .content {
+    padding: 20px;
+}
+
+/* Custom modal class */
+.custom-modal {
+    width: 100px; /* Fixed width for the modal */
+    max-width: 20%; /* Ensure it doesn't exceed the viewport */
+}
+
+
+/* Style for the buttons */
+.ui.button {
+    background-color: #5d999c;
+    color: white;
+    margin-top: 10px;
+}
+
+.ui.button:hover {
+    background-color: #4a7f7b; /* Darker shade on hover */
+}
+
+.view-details-button {
+    background-color: #5d999c; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 15px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition effect */
+    margin-top: 10px; /* Space above the button */
+}
+
+.view-details-button:hover {
+    background-color: #4a7f7b; /* Darker blue on hover */
+}
