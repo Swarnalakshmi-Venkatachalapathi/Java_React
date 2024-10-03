@@ -43,17 +43,25 @@ public class AuthController {
 	@Autowired
     private  UserRepository userRepository;
 
-    @PostMapping("/signup")
-    public ResponseEntity<?> signupCustomer(@RequestBody SignupRequest signupRequest) {
-        if (authService.hasCustomerWithEmail(signupRequest.getEmail()))
-            return new ResponseEntity<>("Customer already exists", HttpStatus.NOT_ACCEPTABLE);
 
-        UserDTO createdCustomerDto = authService.createUser(signupRequest);
+	
+	@PostMapping("/signup")
+	public ResponseEntity<?> signupCustomer(@RequestBody SignupRequest signupRequest) {
+//	    System.out.println("Received SignupRequest: " + signupRequest); // Log request
 
-        if (createdCustomerDto == null) { return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
-        return new ResponseEntity<>(createdCustomerDto, HttpStatus.CREATED);
-    }
+	    if (authService.hasCustomerWithEmail(signupRequest.getEmail())) {
+	        return new ResponseEntity<>("Customer already exists", HttpStatus.NOT_ACCEPTABLE);
+	    }
+
+	    UserDTO createdCustomerDto = authService.createUser(signupRequest);
+
+	    if (createdCustomerDto == null) {
+	        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+	    }
+
+	    return new ResponseEntity<>(createdCustomerDto, HttpStatus.CREATED);
+	}
+
 
     @PostMapping("/login")
     public ResponseEntity<AuthenticationResponse> login(@RequestBody AuthenticationRequest authenticationRequest) {

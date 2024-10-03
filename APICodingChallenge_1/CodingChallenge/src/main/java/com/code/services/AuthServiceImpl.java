@@ -19,19 +19,15 @@ public class AuthServiceImpl implements AuthService {
 
  
 
+	
 	@Override
 	public UserDTO createUser(SignupRequest signupRequest) {
 	    User user = new User();
 	    user.setName(signupRequest.getName());
 	    user.setEmail(signupRequest.getEmail());
 	    user.setPassword(new BCryptPasswordEncoder().encode(signupRequest.getPassword()));
-
-	    // Set default role if none is provided
-	    if (signupRequest.getUserRole() == null) {
-	        user.setUserRole(UserRole.USER); // Default role to USER
-	    } else {
-	        user.setUserRole(signupRequest.getUserRole());
-	    }
+            user.setUserRole(signupRequest.getUserRole());
+	
 
 	    User createdUser = userRepository.save(user);
 
@@ -42,8 +38,10 @@ public class AuthServiceImpl implements AuthService {
 	    userDTO.setEmail(createdUser.getEmail());
 	    userDTO.setUserRole(createdUser.getUserRole().name());
 
-	    return userDTO;  // Rewritten line without hidden characters
+	    return userDTO;
 	}
+
+
 
     @Override
     public boolean hasCustomerWithEmail(String email) {

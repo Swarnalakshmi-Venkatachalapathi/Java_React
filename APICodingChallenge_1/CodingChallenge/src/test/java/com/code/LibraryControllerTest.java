@@ -18,6 +18,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.junit.jupiter.api.extension.ExtendWith;
 
+import com.code.Controller.AdminController;
 import com.code.Controller.LibraryController;
 import com.code.Entity.Library;
 import com.code.Exceptions.ResourceNotFoundException;
@@ -32,6 +33,9 @@ public class LibraryControllerTest {
 
     @InjectMocks
     private LibraryController libraryController;
+    
+    @InjectMocks
+    private AdminController adminController;
 
     @Test
     void getAllBooks() {
@@ -69,7 +73,7 @@ public class LibraryControllerTest {
 
         when(libSer.addBook(newBook)).thenReturn(true);
 
-        ResponseEntity<String> response = libraryController.addBook(newBook);
+        ResponseEntity<String> response = adminController.addBook(newBook);
 
         System.out.println("Response Status: " + response.getStatusCode());
         assertTrue(response.getStatusCode() == HttpStatus.CREATED);
@@ -81,7 +85,7 @@ public class LibraryControllerTest {
         Library updatedBook = new Library(1L, "Updated Book", "Updated Author", 2020);
         when(libSer.updateBook(isbn, null)).thenReturn("Book updated successfully.");
 
-        ResponseEntity<String> response = libraryController.updateBook(isbn, null);
+        ResponseEntity<String> response = adminController.updateBook(isbn, null);
 
         System.out.println("Response: " + response.getBody());
         assertTrue(response.getStatusCode() == HttpStatus.OK);
@@ -93,7 +97,7 @@ public class LibraryControllerTest {
 
         when(libSer.deleteBook(isbn)).thenReturn(true);
 
-        ResponseEntity<?> response = libraryController.deleteBookByIsbn(isbn);
+        ResponseEntity<?> response = adminController.deleteBookByIsbn(isbn);
 
         System.out.println("Response Status: " + response.getStatusCode());
         assertTrue(response.getStatusCode() == HttpStatus.OK);
