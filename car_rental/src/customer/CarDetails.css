@@ -1,0 +1,60 @@
+/* CarDetails.css */
+
+.car-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #d8ebed;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure the modal is on top */
+}
+
+.header {
+  text-align: center; /* Center align the header */
+  margin-bottom: 15px; /* Space below the header */
+}
+
+.car-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.button-container {
+  display: flex; /* Use flexbox for horizontal layout */
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px; /* Space above buttons */
+  justify-content: center; /* Center the buttons */
+}
+
+.book-button {
+  background-color: #57a2a7;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.book-button:hover {
+  background-color: #44845e;
+}
+
+.cancel-button {
+  background-color: #57a2a7; /* Different color for cancel button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cancel-button:hover {
+  background-color: #8c454c; /* Darker red on hover */
+}

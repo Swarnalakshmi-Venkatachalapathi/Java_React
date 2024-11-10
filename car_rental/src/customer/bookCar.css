@@ -1,0 +1,87 @@
+/* bookCar.css */
+.book-car-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  /* bookCar.css */
+.button-container {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  margin-top: 10px; /* Space above the buttons */
+}
+
+  button {
+    width: 150px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #55858e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2e3e43;
+  }
+  
+  p {
+    margin: 10px 0;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  div {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  @media (max-width: 600px) {
+    .book-car-container {
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  }
+  

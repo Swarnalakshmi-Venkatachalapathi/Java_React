@@ -1,0 +1,83 @@
+.dashboardContainer {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(3, 1fr); /* 2 columns for car cards */
+  gap: 20px; /* Space between cards */
+  padding: 20px; /* Overall padding */
+  background-color: #f8f9fa; /* Light background for the container */
+}
+
+.carCard {
+  background-color: #cbe0e2; /* White background for cards */
+  border: 1px solid #dee2e6; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s; /* Animation for hover effect */
+  overflow: hidden; /* Prevent overflow of contents */
+}
+
+.carCard:hover {
+  transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+.carCardImage {
+  height: 200px; /* Fixed height for image container */
+  overflow: hidden; /* Hide overflow */
+}
+
+.carCardImage img {
+  width: 100%; /* Image takes full width */
+  height: 100%; /* Image takes full height */
+  object-fit: cover; /* Cover the area while maintaining aspect ratio */
+}
+
+.carCardDetails {
+  padding: 15px; /* Padding inside the card */
+}
+
+.carTitle {
+  font-size: 18px; /* Title font size */
+  color: #343a40; /* Dark color for title */
+  margin: 0; /* Remove margin */
+}
+
+.carCard p {
+  color: #495057; /* Dark gray color for description */
+  margin: 10px 0; /* Margin for spacing */
+}
+
+h5 {
+  font-size: 14px; /* Font size for details */
+  color: #6c757d; /* Lighter gray for details */
+  margin: 10px 0; /* Margin for spacing */
+}
+
+.buttonContainer {
+  display: flex; /* Use flexbox to align buttons */
+  justify-content: space-between; /* Add space between buttons */
+  margin-top: 10px; /* Optional: Space above buttons */
+}
+
+.bookButton,
+.viewButton {
+  margin-right: 10px; /* Optional: Add margin between buttons */
+  padding: 10px 15px; /* Add padding for better appearance */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #558b8e; /* Primary button color */
+  color: white; /* Button text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.bookButton:hover,
+.viewButton:hover {
+  background-color: #3e7981; /* Darker shade on hover */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboardContainer {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+}

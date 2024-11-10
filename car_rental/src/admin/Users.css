@@ -1,0 +1,21 @@
+/* Users.css */
+.container {
+    margin-top: 20px;
+}
+
+.table-container {
+    padding: 20px;
+}
+
+.table-header {
+    background-color: #2185d0; /* Semantic UI blue */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

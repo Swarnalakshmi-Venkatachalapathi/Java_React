@@ -1,0 +1,196 @@
+
+
+html, body {
+  background-color: #81c5c9;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu Page Styles */
+.menu-page {
+  background-color: #81c5c9;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: #fff;
+    padding: 0px; /* Remove extra padding around the page */
+  }
+  
+  .menu-container {
+ 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0; /* Keep top padding for spacing */
+  }
+  
+  .website-name {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: "Caveat", cursive;
+    font-weight: 700;
+    background: linear-gradient(45deg, #2193b0, #6dd5ed); 
+    -webkit-background-clip: text;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px #000000;
+  }
+  
+  .menu-container nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .menu-container nav a {
+    position: relative;
+    font-size: 1.2em;
+    color: #000000;
+    text-decoration: none;
+    /* padding: 10px 20px; */
+    transition: color 0.3s ease;
+  }
+  
+  .menu-container nav a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(45deg, #2193b0, #6dd5ed); 
+    border-radius: 8px;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .menu-container nav a:hover::before {
+    width: 100%;
+  }
+  
+  .menu-container nav a:hover {
+    color: #ffffff;
+  }
+  
+/* Overall container styling */
+.flex {
+  background-color: #ffffff;
+    display: flex;
+    justify-content: left; /* Center items horizontally */
+    align-items: normal; /* Align items to the top */
+    flex-direction: column;
+    min-height: 150vh;
+    min-width: 200vh; /* Ensure it takes full height for centering */
+}
+/* .center-text {
+  text-align: center;
+} */
+.pc{
+  text-align: center;
+
+}
+.spinner {
+    margin: 20px;
+    font-size: 1.2rem;
+    color: #4A90E2;
+}
+
+h1 {
+    /* margin-bottom: 20px; */
+}
+
+/* Form styling */
+.form-container {
+  /* background-color: #81c5c9; */
+  background-color: #eaeeee;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding-left: 150px;
+    padding-right: 150px;
+    width: 800px;
+    max-width: 1000px; /* Limit the width for better appearance */
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 380px;
+    margin-right: 450px;
+}
+
+/* Input fields and labels */
+input, select, textarea {
+    width: 100%; /* Full width of the form */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Button styling */
+.login-form-button {
+    background-color: #55a3b6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 30px;
+    align-self: center;
+    transition: background-color 0.3s ease;
+}
+
+.login-form-button:hover {
+    background-color: #456976; /* Darker blue on hover */
+}
+
+/* Error message styling */
+.errorMessage {
+    color: #ff0000; /* Red for errors */
+    font-size: 14px;
+}
+
+/* Profile badge styling */
+.profile-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.upload-label {
+    cursor: pointer;
+}
+
+.profile {
+    width: 150px; /* Increase size */
+    height: 150px; /* Increase size */
+    border-radius: 50%; /* Make it a circle */
+    object-fit: cover; /* Cover the circle area */
+    border: 2px solid #dddddd; /* Border around the image */
+    margin-bottom: 10px;
+}
+
+/* Custom styles for the textarea */
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 60px; /* Set a minimum height */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .form-container {
+        /* padding: 15px; */
+    }
+    .login-form-button {
+        /* padding: 10px; */
+        font-size: 14px;
+    }
+}

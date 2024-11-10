@@ -1,0 +1,77 @@
+
+
+
+
+
+
+
+
+
+
+
+   .dashboardContainer {
+    background-color:#0a424a;
+    min-height: 91vh;
+    padding: 24px;
+}
+
+.carCard {
+    background-color: #ccc;
+    padding: 24px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+.carCardImage {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile {
+    height: 130px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.carCardDetails {
+    flex: 2;
+    margin-left: 20px;
+}
+
+.carTitle {
+    color: #108ee9;
+    cursor: pointer;
+}
+
+.actionButtons {
+    float: right;
+}
+
+.buttonPrimary {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #108ee9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonDanger {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonPrimary:hover,
+.buttonDanger:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,261 @@
+/* Ensure the video covers the whole screen or desired section */
+.background-video {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Overlay only on the video */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Slight transparency */
+  z-index: 2;
+}
+
+/* Text below video styling */
+.text-below-video {
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff; /* Set background to white to stand out */
+  z-index: 3; /* Ensure it appears above the video and not in the background */
+  position: relative;
+}
+
+/* Styling the car container */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cars in a row */
+  gap: 20px; /* Space between cars */
+  margin-top: 40px; /* Space between the text and cars */
+}
+
+/* General car card styling */
+.car-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.car-card-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.car-card-details h2 {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* button {
+  margin-right: 10px;
+} */
+.car-card-details button {
+  background-color: #74a5b0;
+  width: 120px; /* Set a specific width for buttons */
+  padding: 10px 0; /* Padding for button height */
+  margin: 0 10px;
+}
+
+.car-card-details button:hover {
+  background-color: #3d7480;
+  width: 120px; /* Set a specific width for buttons */
+  padding: 10px 0; /* Padding for button height */
+  margin: 0 10px;
+}
+
+/* Login and Signup buttons */
+.auth-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.ui.button.primary, .ui.button.secondary {
+  background-color: #74a5b0;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* .ui.button.secondary {
+  background-color: #21ba45;
+} */
+
+/* Modal styling */
+.ui.modal {
+  width: 400px !important;
+  border-radius: 10px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+/* Primary button styling */
+.ui.modal .ui.button {
+  background-color: #2185d0; /* Primary button color */
+  color: white;
+  /* padding: 10px 20px; */
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  width: 120px; /* Set a specific width for buttons */
+  padding: 10px 0; /* Padding for button height */
+  margin: 0 10px;
+}
+
+/* Button hover effect */
+.ui.modal .ui.button:hover {
+  background-color: #1678c2; /* Darker on hover */
+}
+
+/* Secondary cancel button */
+.ui.modal .ui.button.secondary {
+  background-color: #f44336; /* Red cancel button */
+}
+
+.ui.modal .ui.button.secondary:hover {
+  background-color: #d32f2f;
+}
+
+/* Ensure buttons are in the same line */
+.ui.modal .modal-actions {
+  display: flex;
+  justify-content: space-between; /* Space between the buttons */
+  align-items: center;
+}
+
+/* Button sizing and spacing */
+.ui.modal .modal-actions .ui.button {
+  flex: 1; /* Make buttons take equal width */
+  margin-right: 10px; /* Add space between buttons */
+}
+
+.ui.modal .modal-actions .ui.button:last-child {
+  margin-right: 0; /* Remove margin for the last button */
+}
+
+
+.signUp-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signUp-link a {
+  color: #2185d0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.signUp-link a:hover {
+  text-decoration: underline;
+}
+
+
+/* Text styling for the section header */
+.text-below-cars {
+  margin-top: 40px; /* Space above the feedback section */
+  text-align: center; /* Center the text */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Feedback container styling */
+.feedback-container {
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: space-around; /* Space between feedback cards */
+  margin-top: 20px; /* Space above feedback cards */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  background-color: #81c9cf;
+  
+}
+
+/* Individual feedback card styling */
+.feedback-card {
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%; /* Set width for each feedback card */
+  margin-bottom: 20px; /* Space below each card */
+  text-align: center; /* Center content */
+}
+
+
+/* Feedback card text styling */
+.feedback-card h3 {
+  font-size: 1.25rem; /* Size for customer name */
+  margin: 10px 0; /* Margin above and below */
+}
+
+.feedback-card p {
+  margin: 5px 0; /* Margin between rating and feedback */
+}
+
+/* Slogan Container Styling */
+.slogan-container {
+  position: absolute;
+  left: 20px; /* Position from the left */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center vertically using transform */
+  z-index: 3; /* Ensure it appears above the overlay */
+  color: #fff; /* Text color */
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Center items vertically */
+}
+
+/* Slogan Text Styling */
+.slogan-text {
+  font-size: 1.8rem; /* Font size for slogan */
+  font-weight: bold; /* Make the text bold */
+  margin-right: 10px; /* Space between text and button */
+  white-space: nowrap; /* Prevent text from wrapping */
+  color: white; /* White text color */
+  text-align: left; /* Align text to the left */
+}
+
+
+/* Register Link Button Styling */
+.register-link {
+  background-color: transparent; /* Make the button transparent */
+  color: #fff; /* Text color */
+  border: 2px solid #21ba45; /* Add a border for visibility */
+  padding: 10px 20px; /* Padding for the button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+  font-size: 1rem; /* Font size */
+  transition: background-color 0.3s, color 0.3s; /* Transition effect */
+}
+
+/* Register Link Button Hover Effect */
+.register-link:hover {
+  background-color: rgba(33, 186, 69, 0.3); /* Slightly darker shade on hover */
+  color: #21ba45; /* Change text color on hover */
+}

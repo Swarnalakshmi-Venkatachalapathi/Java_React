@@ -1,0 +1,351 @@
+/* 
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Courgette&family=Playwrite+DE+Grund:wght@100..400&display=swap');
+
+ .menu-page {
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     align-items: center;
+     min-height: 100vh;
+     background: #0a424a;
+     padding: 20px;
+ }
+ 
+ .menu-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     max-width: 1200px;
+ }
+ 
+ .website-name {
+     font-family: "Caveat", cursive;
+     font-optical-sizing: auto;
+     font-weight: 700;
+     font-style: normal;
+     background: linear-gradient(45deg, #e78fb9, #8fe003);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     font-size: 2.5em;
+     text-shadow: 2px 2px 5px #000000;
+ }
+ 
+ .menu-container nav {
+     position: relative;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     padding: 10px;
+     gap: 20px;
+ 
+     border-radius: 8px;
+ }
+ 
+ .menu-container nav a {
+     position: relative;
+     display: inline-block;
+     font-size: 1.2em;
+     color: #000000;
+     text-decoration: none;
+     padding: 10px 20px;
+     z-index: 1;
+     transition: color 0.3s ease;
+ }
+ 
+ .menu-container nav a::before {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 0;
+     height: 100%;
+     background: linear-gradient(45deg, #e78fb9, #8fe003);
+     border-radius: 8px;
+     z-index: -1;
+     transition: width 0.3s ease, left 0.3s ease;
+ }
+ 
+ .menu-container nav a:hover::before {
+     width: 100%;
+ }
+ 
+ .menu-container nav a:hover {
+     color: #ffffff; 
+ }
+   */
+
+
+
+/* 
+   @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Courgette&family=Playwrite+DE+Grund:wght@100..400&display=swap');
+
+.menu-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    min-height: 100vh;
+    background: #0a424a;
+    padding: 20px;
+    position: relative;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    position: absolute;
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%); /
+}
+
+.website-name {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    background: linear-gradient(45deg, #e78fb9, #8fe003);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px #000000;
+    margin-right: 50px;
+    margin-bottom: 20px; 
+}
+
+.menu-container nav {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 8px;
+}
+
+.menu-container nav a {
+    position: relative;
+    display: inline-block;
+    font-size: 1.2em;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.menu-container nav a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(45deg, #e78fb9, #8fe003);
+    border-radius: 8px;
+    z-index: -1;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.menu-container nav a:hover::before {
+    width: 100%;
+}
+
+.menu-container nav a:hover {
+    color: #ffffff;
+} */
+
+ /* body {
+    background-color: #81c5c9;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+   */
+   html, body { 
+    background: linear-gradient(to bottom, white 50%, #81c5c9 50%); /* Set gradient */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.menu-page {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: flex-start; /* Align items to the top */
+    min-height: 100vh;
+    background: #fff;
+    /* padding: 20px; */
+    background-color: #81c5c9;
+}
+
+.menu-container {
+    /* background-color: #81c5c9; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.website-name {
+    position: absolute;
+    
+    background-color: #81c5c9;
+    top: 20px; /* Adjust to your desired distance from the top */
+    left: 20px; /* Adjust to your desired distance from the left */
+    font-family: "Caveat", cursive;
+    font-weight: 700;
+    /* background: linear-gradient(45deg, #e78fb9, #8fe003); */
+    background: linear-gradient(45deg, #2193b0, #6dd5ed); 
+     -webkit-background-clip: text;
+    /*-webkit-text-fill-color: transparent; */
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px #000000;
+}
+
+.menu-container nav {
+    
+    position: absolute;
+    /* top: 20px;  */
+    /* Adjust to your desired distance from the top */
+    /* right: 20px;  */
+    /* Align navigation to the extreme right */
+    display: flex;
+    align-items: center;
+    /* padding: 10px;
+    gap: 20px; */
+}
+
+
+.menu-container nav a {
+  
+    position: relative;
+    display: inline-block;
+    font-size: 1.2em;
+    color: #000000; /* Base text color */
+    text-decoration: none;
+    padding: 10px 20px;
+    z-index: 1;
+    transition: color 0.3s ease; /* Ensure smooth transition */
+}
+
+.menu-container nav a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(45deg, #2193b0, #6dd5ed); 
+    border-radius: 8px;
+    z-index: -1;
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth hover effect */
+}
+
+.menu-container nav a:hover::before {
+    background: linear-gradient(45deg, #2193b0, #6dd5ed); 
+    width: 100%; /* Expand the background on hover */
+}
+
+.menu-container nav a:hover {
+    color: #ffffff !important; /* Ensure text color changes to white */
+}
+
+
+
+.menu-container nav a:hover::before {
+    width: 100%;
+}
+
+.menu-container nav a:hover {
+    color: #ffffff;
+}
+
+.cars-container {
+    background-color: #ffffff;
+    display: flex;                /* Use flexbox for layout */
+    flex-wrap: wrap;             /* Allow wrapping of items */
+    justify-content: flex-start;  /* Align items to the left */
+    /* margin: 20px 10px ;            Add top margin to separate from the header */
+    padding-top: 40px; 
+    padding-left: 30px;        /*   Add padding for more space */
+}
+
+.cars-container .card {
+    flex: 0 1 calc(50% - 30px); /* Set each card to take up one-third of the container minus margin */
+    margin: 3px;                /* Increased margin between cards */
+    box-sizing: border-box;      /* Include padding and border in element's total width and height */
+    min-width: 600px;            /* Ensure a minimum width for cards */
+    max-width: 650px;            /* Optional: Set a maximum width for cards */
+}
+
+
+/* Adjust card styling if needed */
+.cars-container .card img {
+    width: 140%; /* Ensure images fit within the card */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.menu-page {
+    padding: 20px; /* Add padding to the menu page */
+}
+.logout-button {
+    position: relative;            /* For pseudo-element positioning */
+    display: inline-block;         /* Aligns with other nav items */
+    font-size: 1.2em;              /* Same font size as links */
+    color: #000000;                /* Base text color */
+    text-decoration: none;         /* Remove text underline */
+    /* padding: 10px 20px;            Padding similar to links */
+    cursor: pointer;               /* Hand pointer on hover */
+    background: none;              /* Remove default button background */
+    border: none;                  /* Remove default border */
+    z-index: 1;                    /* To ensure text is above background */
+    transition: color 0.3s ease;   /* Smooth text color transition */
+    outline: none;                 /* Remove focus outline */
+}
+
+.logout-button::before {
+    content: "";                   /* Pseudo-element for hover effect */
+    position: absolute;            /* Positioned relative to button */
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 100%;
+    /* background: linear-gradient(45deg, #8fdee7, #8fe003);  */
+    /* background: linear-gradient(45deg, #d4d3dd, #efefbb);  */
+/* Muted gray and light beige */
+/* background: linear-gradient(45deg, #74ebd5, #acb6e5);  */
+background: linear-gradient(45deg, #2193b0, #6dd5ed); 
+/* background: linear-gradient(45deg, #00b09b, #96c93d);  */
+/* Teal and lime green */
+
+/* Deep blue and light turquoise */
+
+
+/* Aqua and cool purple */
+
+
+    /* Same gradient */
+    /* border-radius: 8px;            Rounded edges */
+    z-index: -1;                   /* Behind the button text */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth transition */
+}
+
+.logout-button:hover::before {
+    width: 100%;                   /* Full width on hover */
+}
+
+.logout-button:hover {
+    color: #ffffff !important;     /* Ensure text color changes to white */
+}
+
+.logout-button:focus {
+    outline: none;                 /* Remove default button outline on focus */
+}
